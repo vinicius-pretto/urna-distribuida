@@ -27,6 +27,47 @@ main #numbers-container .panel {
     display: flex;
 }
 
+#login {
+    margin-top: 20%;
+}
+
+#login h1 {
+    font-size: 3em;
+}
+
+#login h1,
+#login button {
+    text-align: center;
+}
+
+#login input[type="text"] {
+    margin-top: 5%;
+    padding: 20px;
+    border: 1px solid #888;
+    font-size: 1.4em;
+}
+
+#login button,
+#login input[type="text"] {
+    border-radius: 15px;
+}
+
+#login button {
+    font-weight: bold;
+    padding: 24px 35px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #FFF;
+    color: #FF9B00;
+    border: 2px solid #FF9B00;    
+    transition-duration: 0.4s;
+}
+
+#login button:hover {
+    background: #FF9B00;
+    color: #FFF;
+}
+
 main {
     margin-top: 4.5%;
     height: 80%;
@@ -167,7 +208,8 @@ main #numbers-container .panel .white-button,
 main #numbers-container .panel .dismiss-button,
 main #numbers-container .panel .confirm-button,
 main #panel-container #candidate #description h1,
-main #panel-container #candidate #description h2 {
+main #panel-container #candidate #description h2,
+#login button {
     text-transform: uppercase;
 }
 
