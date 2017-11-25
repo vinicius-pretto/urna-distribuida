@@ -106,9 +106,12 @@ main #numbers-container header {
 
 main #numbers-container #numbers,
 main #panel-container #candidate #description,
-main #panel-container #candidate #description ul,
-main #numbers-container header img {
+main #panel-container #candidate #description ul {
     width: 100%;
+}
+
+main #numbers-container header img {
+    width: 180px;
 }
 
 main #numbers-container #numbers {
