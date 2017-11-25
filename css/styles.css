@@ -23,7 +23,8 @@ main #numbers-container,
 main #numbers-container #numbers,
 main #numbers-container header,
 main #numbers-container #numbers .line,
-main #numbers-container .panel {
+main #numbers-container .panel,
+main #dashboard {
     display: flex;
 }
 
@@ -242,4 +243,34 @@ main #numbers-container .panel .white-button,
 main #numbers-container .panel .dismiss-button,
 main #numbers-container .panel .confirm-button {
     cursor: pointer;
+}
+
+#dashboard {
+    margin-top: 0.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 68%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+#dashboard img {
+    width: 280px;
+    height: 280px;
+    filter: grayscale(100%);
+}
+
+#dashboard figure {
+    padding: 5px;
+}
+
+#dashboard figure figcaption {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #444;
+    color: #FFF;
+    margin-top: -4px;
 }
