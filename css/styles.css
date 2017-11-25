@@ -187,3 +187,10 @@ main #numbers-container .panel .confirm-button {
     background: #00a155;  
     border-color: #00a155;  
 }
+
+main #numbers-container #numbers .line .number,
+main #numbers-container .panel .white-button,
+main #numbers-container .panel .dismiss-button,
+main #numbers-container .panel .confirm-button {
+    cursor: pointer;
+}
