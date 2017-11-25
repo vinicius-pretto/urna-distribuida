@@ -17,6 +17,7 @@ main #panel-container,
 main #panel-container #candidate,
 main #panel-container #candidate #description,
 main #panel-container #candidate #description ul,
+main #panel-container #candidate #description ul li,
 main #panel-container #picture,
 main #numbers-container,
 main #numbers-container #numbers,
@@ -27,9 +28,9 @@ main #numbers-container .panel {
 }
 
 main {
-    margin-top: 4.2%;
+    margin-top: 4.5%;
+    height: 80%;
     width: 90%;
-    height: 550px;
 }
 
 main #panel-container {
@@ -57,8 +58,10 @@ main #panel-container #candidate #description ul {
 
 main #panel-container #candidate #description ul li {
     border: 1px solid #444;
-    padding: 25px 35px;
     font-size: 2em;
+    width: 90px;
+    height: 90px;
+    justify-content: center;
 }
 
 main #panel-container #candidate #description #name {
@@ -101,7 +104,6 @@ main #numbers-container header {
     background: #FFF;
     padding: 10px;
     height: 13%;
-    align-items: center;
 }
 
 main #numbers-container #numbers,
@@ -114,9 +116,14 @@ main #numbers-container header img {
     width: 180px;
 }
 
+main #numbers-container #numbers,
+main #numbers-container header,
+main #panel-container #candidate #description ul li {
+    align-items: center;
+}
+
 main #numbers-container #numbers {
     align-content: center;
-    align-items: center;
     height: 87%;
     padding: 10px;
 }
