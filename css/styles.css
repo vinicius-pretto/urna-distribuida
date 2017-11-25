@@ -13,6 +13,11 @@ body {
 
 body,
 main,
+main #panel-container,
+main #panel-container #candidate,
+main #panel-container #candidate #description,
+main #panel-container #candidate #description ul,
+main #panel-container #picture,
 main #numbers-container,
 main #numbers-container #numbers,
 main #numbers-container header,
@@ -27,16 +32,58 @@ main {
     height: 550px;
 }
 
-main #panel {
+main #panel-container {
     width: 65%;
+}
+
+main #panel-container #candidate {
+    width: 70%;
+    padding: 20px;
+}
+
+main #panel-container #candidate #description h1 {
+    font-size: 1.8em;
+}
+
+main #panel-container #candidate #description h2 {
+    font-size: 3em;
+    padding: 30px;
+}
+
+main #panel-container #candidate #description ul {
+    margin-top: 10%;
+    justify-content: space-around;
+}
+
+main #panel-container #candidate #description ul li {
+    border: 1px solid #444;
+    padding: 25px 35px;
+    font-size: 2em;
+}
+
+main #panel-container #candidate #description #name {
+    font-size: 2.7em;
+    margin-top: 20%;
+    text-align: center;
+}
+
+main #panel-container #picture {
+    justify-content: flex-end;
+    width: 30%;
+    height: 40%;
+}
+
+main #panel-container #picture img {
+    width: 239px;
+    filter: grayscale(100%);
 }
 
 main #numbers-container {
     width: 35%;
 }
 
-main #panel {
-    background: #888;
+main #panel-container {
+    background: #bdcad0;
 }
 
 main #numbers-container {
@@ -45,7 +92,8 @@ main #numbers-container {
 
 main #numbers-container,
 main #numbers-container header,
-main #numbers-container #numbers {
+main #numbers-container #numbers,
+main #panel-container #candidate #description {
     flex-direction: column;
 }
 
@@ -56,12 +104,14 @@ main #numbers-container header {
     align-items: center;
 }
 
+main #numbers-container #numbers,
+main #panel-container #candidate #description,
+main #panel-container #candidate #description ul,
 main #numbers-container header img {
-    width: 180px;
+    width: 100%;
 }
 
 main #numbers-container #numbers {
-    width: 100%;
     align-content: center;
     align-items: center;
     height: 87%;
@@ -105,8 +155,15 @@ main #numbers-container .panel .confirm-button {
 
 main #numbers-container .panel .white-button,
 main #numbers-container .panel .dismiss-button,
-main #numbers-container .panel .confirm-button {
+main #numbers-container .panel .confirm-button,
+main #panel-container #candidate #description h1,
+main #panel-container #candidate #description h2 {
     text-transform: uppercase;
+}
+
+main #numbers-container .panel .white-button,
+main #numbers-container .panel .dismiss-button,
+main #numbers-container .panel .confirm-button {
     font-size: 1em;
     padding: 20px;
     border: 1px solid;
