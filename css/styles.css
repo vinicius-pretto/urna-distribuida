@@ -40,13 +40,17 @@ main #panel {
 }
 
 main #numbers-container {
-    background: #363636;
+    background: #363636;   
+}
+
+main #numbers-container,
+main #numbers-container header,
+main #numbers-container #numbers {
     flex-direction: column;
 }
 
 main #numbers-container header {
     background: #FFF;
-    flex-direction: column;
     padding: 10px;
     height: 13%;
     align-items: center;
@@ -58,7 +62,6 @@ main #numbers-container header img {
 
 main #numbers-container #numbers {
     width: 100%;
-    flex-direction: column;
     align-content: center;
     align-items: center;
     height: 87%;
