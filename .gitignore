@@ -1,0 +1,14 @@
+# Comissário
+comissario/node_modules/
+
+# Contador
+contador/node_modules/
+
+# Distribuidor
+distribuidor/node_modules/
+
+# Eleitor
+eleitor/node_modules/
+
+# Painel
+painel/node_modules/
