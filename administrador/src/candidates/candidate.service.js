@@ -7,7 +7,6 @@ const COMISSARIO_URL = require('../../config').comissarioURL;
 class CandidateService {
   constructor(CacheClient) {
     this.CacheClient = CacheClient;
-    this.putCandidatesOnCache();
   }
 
   buildKey(candidateNumber) {
