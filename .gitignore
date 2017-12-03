@@ -1,14 +1,20 @@
 # Comissário
 comissario/node_modules/
+comissario/.vscode/
 
 # Contador
 contador/node_modules/
+contador/.vscode/
 
 # Distribuidor
 distribuidor/node_modules/
+distribuidor/.vscode/
 
 # Eleitor
 eleitor/node_modules/
+eleitor/.vscode/
 
 # Painel
 painel/node_modules/
+painel/.vscode/
+
