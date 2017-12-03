@@ -21,11 +21,15 @@ class CacheClient {
   }
 
   getAll(pattern) {
-    return this.client.keysAsync(pattern)
+    return this.keys(pattern)
       .then(keys => {
         const promises = keys.map(key => this.get(key));
         return Promise.all(promises);
       });
+  }
+
+  keys(pattern) {
+    return this.client.keysAsync(pattern);
   }
 }
 
