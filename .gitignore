@@ -18,3 +18,6 @@ eleitor/.vscode/
 painel/node_modules/
 painel/.vscode/
 
+# Administrador
+administrador/node_modules/
+administrador/.vscode/
