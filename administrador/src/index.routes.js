@@ -1,3 +1,3 @@
 module.exports = (app) => {
-  require('./candidates/candidate.routes')(app);
+  require('./auth/auth.routes')(app);
 };
