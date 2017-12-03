@@ -19,6 +19,10 @@ class CacheClient {
     return this.client.getAsync(key)
       .then(response => this.toJSON(response));
   }
+
+  keys(pattern) {
+    return this.client.keysAsync(pattern);
+  }
 }
 
 module.exports = CacheClient;
