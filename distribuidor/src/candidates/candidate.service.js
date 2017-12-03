@@ -31,22 +31,12 @@ class CandidateService {
   }
 
   findAllOnCache() {
-    return this.CacheClient.getAll('*');
+    return this.CacheClient.getAll('candidate:*');
   }
 
   findBy(candidateNumber) {
     const key = this.buildKey(candidateNumber);
     return this.CacheClient.get(key);
-  }
-
-  isValid(candidateNumber) {
-    return this.findBy(candidateNumber)
-      .then(candidate => {
-          if (_.isEmpty(candidate)) {
-            return Promise.reject('Inválid candidate');
-          }
-          return Promise.resolve();
-      });
   }
 }
 

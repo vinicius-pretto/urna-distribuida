@@ -1,5 +1,6 @@
 const Promise = require('bluebird');
 const axios = require('axios');
+const _ = require('lodash');
 const COMISSARIO_URL = require('../../config').comissarioURL;
 
 class VoterService {
@@ -8,7 +9,7 @@ class VoterService {
   }
 
   buildKey(voter) {
-    return `${voter.name}:${voter.voterTitle}`;
+    return `voter:${voter.name}:${voter.voterTitle}`;
   }
 
   putVotersOnCache() {
@@ -29,7 +30,18 @@ class VoterService {
   }
 
   findAllOnCache() {
-    return this.CacheClient.getAll('*');
+    return this.CacheClient.getAll('voter:*');
+  }
+
+  validate(voter) {
+    const key = this.buildKey(voter);
+    return this.CacheClient.get(key)
+      .then(response => {
+        if (_.isEmpty(response)) {
+          return Promise.reject('Unauthorized');
+        }
+        return Promise.resolve();
+      });
   }
 }
 
