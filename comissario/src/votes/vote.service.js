@@ -9,7 +9,6 @@ class VoteService {
 
     findAll() {
         return this.VoteModel.findAll({
-            attributes: ['id', 'candidate', 'voter', 'name', ['created_at', 'createdAt'], ['updated_at', 'updatedAt']],
             where: {}
         })
     }

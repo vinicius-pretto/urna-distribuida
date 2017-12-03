@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS votes (
   id SERIAL,
   candidate INTEGER NOT NULL,
   voter INTEGER NOT NULL,
-  name VARCHAR NOT NULL 
+  date VARCHAR NOT NULL 
 );
 
 -- voters

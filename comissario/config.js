@@ -9,7 +9,8 @@ module.exports = {
         logging: process.env.LOGGING || false,
         operatorsAliases: false,
         define: {
-            underscored: true
+            underscored: true,
+            timestamps: false
         }
     }
 }

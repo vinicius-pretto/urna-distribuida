@@ -9,7 +9,6 @@ class CandidateService {
 
     findAll() {
         return this.CandidateModel.findAll({
-            attributes: ['id', 'name', ['created_at', 'createdAt'], ['updated_at', 'updatedAt']],
             where: {}
         });
     }

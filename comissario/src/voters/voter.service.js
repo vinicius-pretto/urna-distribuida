@@ -4,12 +4,16 @@ class VoterService {
     }
 
     create(voter) {
-        return this.VoterModel.create(voter);
+        const payload = {
+            name: voter.name,
+            voter_title: voter.voterTitle
+        }
+        return this.VoterModel.create(payload);
     }
 
     findAll() {
         return this.VoterModel.findAll({
-            attributes: ['id', 'name', ['voter_title', 'voterTitle'], ['created_at', 'createdAt'], ['updated_at', 'updatedAt']],
+            attributes: ['id', 'name', ['voter_title', 'voterTitle']],
             where: {}
         });
     }
