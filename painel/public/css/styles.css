@@ -259,7 +259,6 @@ main #numbers-container .panel .confirm-button {
 #dashboard img {
     width: 280px;
     height: 280px;
-    filter: grayscale(100%);
 }
 
 #dashboard figure {
@@ -270,7 +269,7 @@ main #numbers-container .panel .confirm-button {
     padding: 10px;
     text-transform: uppercase;
     text-align: center;
-    background: #444;
+    background: #0a0a0a;
     color: #FFF;
     margin-top: -4px;
 }
