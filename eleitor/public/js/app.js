@@ -14,7 +14,7 @@
     var votacaoState = {
       name: 'votacao',
       url: '/votacao',
-      templateUrl: '/js/votacao/votacao.html'
+      component: 'votacao'
     }
   
     $stateProvider.state(loginState);

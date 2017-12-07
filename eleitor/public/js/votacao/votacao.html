@@ -6,15 +6,15 @@
                 <h2>Presidente</h2>
                 <div id="candidate-numbers">
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>{{ vm.startNumber }}</li>
+                        <li>{{ vm.endNumber }}</li>
                     </ul>
                 </div>
-                <div id="name">Chapolin Colorado</div>
+                <div id="name">{{ vm.candidateSelected.name }}</div>
             </div>
         </div>
         <div id="picture">
-            <img src="">
+            <img src="{{ vm.candidateSelected.picture }}">
         </div>
     </div>
     <div id="numbers-container">
@@ -23,26 +23,26 @@
         </header>
         <div id="numbers">
             <div class="line">
-                <button type="button" class="number">1</button>
-                <button type="button" class="number">2</button>
-                <button type="button" class="number">3</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(1)">1</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(2)">2</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(3)">3</button>
             </div>
             <div class="line">
-                <button type="button" class="number">4</button>
-                <button type="button" class="number">5</button>
-                <button type="button" class="number">6</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(4)">4</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(5)">5</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(6)">6</button>
             </div>
             <div class="line">
-                <button type="button" class="number">7</button>
-                <button type="button" class="number">8</button>
-                <button type="button" class="number">9</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(7)">7</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(8)">8</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(9)">9</button>
             </div>
             <div class="line">
-                <button type="button" class="number">0</button>
+                <button type="button" class="number" ng-click="vm.pressNumber(0)">0</button>
             </div>
             <div class="panel">
                 <button type="button" class="white-button">Branco</button>
-                <button type="button" class="dismiss-button">Corrige</button>
+                <button type="button" class="dismiss-button" ng-click="vm.correct()">Corrige</button>
                 <button type="button" class="confirm-button">Confirma</button>
             </div>
         </div>
