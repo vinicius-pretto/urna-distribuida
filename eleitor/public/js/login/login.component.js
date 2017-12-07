@@ -20,7 +20,9 @@
 
     function login(voter) {
       LoginService.login(voter)
-        .then(function() {
+        .then(function(response) {
+          var user = response.data;
+          sessionStorage.setItem('user', JSON.stringify(user));
           $state.go('votacao');
         })
         .catch(function(error) {
