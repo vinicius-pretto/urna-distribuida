@@ -9,13 +9,21 @@
 
   function VotacaoService($http) {
     var ADMINISTRADOR_URL = 'http://localhost:3006';
+    var CONTADOR_URL = 'http://localhost:3001';
 
-    function validate(voter) {
-      return $http.post(ADMINISTRADOR_URL + '/auth', voter);
+    function validate(vote) {
+      return $http.post(ADMINISTRADOR_URL + '/auth', vote);
+    }
+
+    function sendVote(vote) { 
+      return validate(vote)
+        .then(function() {
+          return $http.post(CONTADOR_URL + '/votes', vote);
+        });
     }
 
     return {
-      validate: validate
+      sendVote: sendVote
     }
   }
 })();

@@ -79,7 +79,7 @@
           voter: user.id,
           date: new Date().toISOString()
         }
-        return VotacaoService.validate(vote)
+        return VotacaoService.sendVote(vote)
           .then(function() {
             alert('Voto realizado com sucesso!');
           })
