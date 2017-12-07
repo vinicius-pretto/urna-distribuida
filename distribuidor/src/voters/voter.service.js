@@ -40,7 +40,7 @@ class VoterService {
         if (_.isEmpty(response)) {
           return Promise.reject('Unauthorized');
         }
-        return Promise.resolve();
+        return Promise.resolve(response);
       });
   }
 }

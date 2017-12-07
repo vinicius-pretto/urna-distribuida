@@ -8,7 +8,9 @@ module.exports = (app) => {
 
   app.post('/auth', (req, res, next) => {
     return voterService.validate(req.body)
-      .then(() => res.sendStatus(ACCEPTED))
+      .then(user => {
+        res.status(ACCEPTED).json(user);
+      })
       .catch(error => {
         console.log('Erro unauthorized', error);
         res.sendStatus(UNAUTHORIZED);
