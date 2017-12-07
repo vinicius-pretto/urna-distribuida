@@ -4,7 +4,8 @@ const VoteService = require('./vote.service');
 
 module.exports = (app) => {
   const cacheClient = new CacheClient();
-  const voteService = new VoteService(cacheClient);
+  const webSocket = app.webSocket;
+  const voteService = new VoteService(cacheClient, webSocket);
 
   app.post('/votes', (req, res, next) => {
     const containsVote = code => code === 0;

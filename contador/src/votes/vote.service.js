@@ -1,6 +1,7 @@
 class VoteService {
-  constructor(CacheClient) {
+  constructor(CacheClient, WebSocket) {
     this.CacheClient = CacheClient;
+    this.WebSocket = WebSocket;
   }
 
   buildKey(vote) {
@@ -9,7 +10,10 @@ class VoteService {
 
   putOnCache(vote) {
     const key = this.buildKey(vote);
-    return this.CacheClient.setnx(key, vote);
+    return this.CacheClient.setnx(key, vote)
+      .then(() => {
+        this.WebSocket.emit('votes.add', vote);
+      });
   }
 }
 
