@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Urna Distribuída</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body ng-controller="LoginController as vm">
     <div id="login">
-        <h1>Votar</h1>
-        <input type="text" placeholder="Digite seu nome">
-        <button type="button">Entrar</button>
+        <h1>Login</h1>
+        <input type="text" ng-model="voter.name" placeholder="Nome"><br>
+        <input type="text" ng-model="voter.voterTitle" placeholder="Titulo de eleitor" ><br>
+        <button ng-click="vm.login(voter)" type="button">Entrar</button>
     </div>
+
+    <script src="/lib/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/login/login.service.js"></script>
+    <script src="/js/login/login.controller.js"></script>
 </body>
 </html>

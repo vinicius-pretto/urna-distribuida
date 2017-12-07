@@ -29,33 +29,33 @@ main #dashboard {
 }
 
 #login {
-    margin-top: 20%;
+    margin-top: 12%;
 }
 
 #login h1 {
     font-size: 3em;
+    margin-bottom: 5%;
 }
 
-#login h1,
 #login button {
     text-align: center;
 }
 
 #login input[type="text"] {
-    margin-top: 5%;
-    padding: 20px;
+    padding: 12px;
     border: 1px solid #888;
     font-size: 1.4em;
 }
 
 #login button,
 #login input[type="text"] {
-    border-radius: 15px;
+    border-radius: 10px;
+    margin: 1%;
 }
 
 #login button {
     font-weight: bold;
-    padding: 24px 35px;
+    padding: 17px 120px;
     font-size: 0.9em;
     cursor: pointer;
     background-color: #FFF;
