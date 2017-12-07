@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
     <meta charset="UTF-8">
@@ -10,32 +10,18 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body ng-controller="DashboardController as vm">
     <div id="dashboard">
-        <figure>
-            <img src="images/chapolin-colorado.jpg" alt="Chapolin Colorado" title="Chapolin Colorado"></img>
-            <figcaption>Votos: 22</figcaption>
-        </figure>
-        <figure>
-            <img src="images/alma-negra.jpg" alt="Alma Negra" title="Alma Negra"></img>
-            <figcaption>Votos: 5</figcaption>
-        </figure>
-        <figure>
-            <img src="images/chinesinho.jpg" alt="Chinesinho" title="Chinesinho"></img>
-            <figcaption>Votos: 14</figcaption>
-        </figure>
-        <figure>
-            <img src="images/almondega.jpg" alt="Almondega" title="Almondega"></img>
-            <figcaption>Votos: 16</figcaption>
-        </figure>
-        <figure>
-            <img src="images/quase-nada.jpg" alt="Quase Nada" title="Quase Nada"></img>
-            <figcaption>Votos: 19</figcaption>
-        </figure>
-        <figure>
-            <img src="images/tripa-seca.png" alt="Tripa Seca" title="Tripa Seca"></img>
-            <figcaption>Votos: 2</figcaption>
+        <figure ng-repeat="candidate in vm.candidates">
+            <img ng-src="{{ candidate.picture }}" title="{{ candidate.name }}"></img>
+            <figcaption>Votos: <span>{{ candidate.votes }}</span></figcaption>
         </figure>
     </div>
+
+    <script src="http://localhost:3001/socket.io/socket.io.js"></script>
+    <script src="/js/lib/angular.min.js"></script>
+    <script src="/js/app.module.js"></script>
+    <script src="/js/dashboard/dashboard.service.js"></script>
+    <script src="/js/dashboard/dashboard.controller.js"></script>
 </body>
 </html>
