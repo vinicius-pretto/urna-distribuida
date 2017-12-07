@@ -18,7 +18,7 @@
 
     function incrementVote(candidateId, candidates) {
       var candidateIndex = candidates.findIndex(function(candidate) {
-        return candidate.id === candidateId;
+        return candidate.number === candidateId;
       });
 
       if (candidateIndex !== -1) {
